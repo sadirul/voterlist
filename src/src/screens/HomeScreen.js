@@ -289,7 +289,7 @@ export default function HomeScreen({navigation}) {
         <View style={styles.container}>
           {loading && (
           <View style={styles.loader}>
-            <ActivityIndicator size="large" color="#02A8F4" style={styles.indicator}/>
+            <ActivityIndicator size="large" color="#0000ff" style={styles.indicator}/>
             <Text style={styles.fetchingStyleText}>Fetching data...</Text>
           </View>
         )}

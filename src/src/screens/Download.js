@@ -179,6 +179,7 @@ export default function Download({ navigation }) {
   function renderElements() {
     return allFiles.length > 0 ? (
       <>
+      <Text>{MyContext.donwloadedContext}</Text>
         <FlatList
           style={{ width: '98%' }}
           data={allFiles}
@@ -228,6 +229,7 @@ export default function Download({ navigation }) {
         style={{
           backgroundColor: 'white',
           width: '98%',
+          // marginBottom: 10,
           fontWeight: 'bold',
           fontSize: 15,
           borderColor: '#ccc',

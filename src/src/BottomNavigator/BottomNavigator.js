@@ -2,10 +2,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Image, View, Text } from 'react-native'
 import HomeScreen from '../screens/HomeScreen'
 import Download from '../screens/Download'
-
+// import MyContext from '../Context/ContextAPI'
+// import { useContext } from 'react'
 const Tab = createBottomTabNavigator()
 
 export default function BottomNavigator() {
+  // const user = useContext(MyContext);
+  // console.log(user)
   const HomeIcon = require('../images/home.png')
   const DownloadIcon = require('../images/download.png')
   return (
