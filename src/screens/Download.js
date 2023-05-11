@@ -119,7 +119,7 @@ export default function Download({ navigation }) {
     if (closeThis !== null && (deleteId === closeThis)) {
       closeRef.close()
     }
-    getFiles()
+    // getFiles()
     setModalVisible(false)
     setSearchCount((prev) => prev - 1)
     ToastAndroid.show("Voter List deteted successfully", ToastAndroid.SHORT)
