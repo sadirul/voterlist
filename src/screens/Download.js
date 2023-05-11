@@ -15,7 +15,8 @@ import {
   TouchableOpacity,
   TextInput,
   Modal,
-  ToastAndroid
+  ToastAndroid,
+  Vibration
 } from 'react-native'
 
 import {
@@ -77,6 +78,7 @@ export default function Download({ navigation }) {
 
   const [deleteId, setDeleteId] = useState()
   const deleteRationCard = async (id) => {
+    Vibration.vibrate(100)
     setDeleteId(id)
     setModalVisible(true)
 
