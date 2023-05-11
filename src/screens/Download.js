@@ -49,10 +49,6 @@ export default function Download({ navigation }) {
   const dirPath = `${fs.dirs.DownloadDir}/WB Voter List`
   const { readDirectory, shareFile } = CustomHelpers()
 
-  // useEffect(() => {
-  //   console.log(MyContext.donwloadedContext)
-  // }, [MyContext.donwloadedContext])
-  
   const openFile = (id) => {
     const path = `${dirPath}/${allFiles[id]}`
     RNFetchBlob.android.actionViewIntent(path, 'application/pdf')
@@ -75,6 +71,7 @@ export default function Download({ navigation }) {
   useEffect(() => {
     if(MyContext.donwloadedContext){
       setAllFiles( (prev) => [...prev, MyContext.donwloadedContext] )
+      setSearchCount((prev) => prev + 1)
     }
   }, [MyContext.donwloadedContext])
 
@@ -122,6 +119,7 @@ export default function Download({ navigation }) {
     }
     getFiles()
     setModalVisible(false)
+    setSearchCount((prev) => prev - 1)
     ToastAndroid.show("Voter List deteted successfully", ToastAndroid.SHORT)
   }
 

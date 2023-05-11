@@ -1,8 +1,10 @@
 {
     "show" : {
         "banner" : false,
-        "interstitial" : false
+        "interstitial" : true,
+        "rewarded" : false,
+        "appOpen" : false
     },
-    "banner_id" : "ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy",
+    "banner_id" : "",
     "interstitial_id" : "ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy"
 }
